@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<html lang="es">
 	<head>
+		<title><?php echo lang('titulo')?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/960.css" media="screen" />
 		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/text.css" media="screen" />
@@ -61,7 +62,7 @@
 		<div class="grid_12" id="login">
 			<div class="grid_8 push_2" id="formulario_login">
 				<div class="grid_6 push_1" id="campos_login">
-					<?=form_open(base_url().'admin/login/new_user')?>
+					<?=form_open('admin/login/new_user')?>
 					<label for="username">Nombre de usuario:</label>
 					<?=form_input($username)?><p><?=form_error('username')?></p>
 					<label for="password">Introduce tu password:</label>

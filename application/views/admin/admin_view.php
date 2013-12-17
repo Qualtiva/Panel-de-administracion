@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<html lang="es">
 	<head>
+		<title><?php echo lang('titulo')?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/960.css" media="screen" />
 		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/text.css" media="screen" />

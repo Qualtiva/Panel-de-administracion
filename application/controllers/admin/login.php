@@ -12,7 +12,14 @@ class Login extends CI_Controller
     }
 	
 	public function index()
-	{	
+	{
+	    // necesita cargar los 2 ayudantes
+	    $this->load->helper('language');
+	    $this->load->helper('url');
+	 
+	    // carga los idiomas
+	    $this->lang->load('inicio');
+
 		switch ($this->session->userdata('perfil')) {
 			case '':
 				$data['token'] = $this->token();
@@ -20,13 +27,13 @@ class Login extends CI_Controller
 				$this->load->view('admin/login_view',$data);
 				break;
 			case 'administrador':
-				redirect(base_url().'admin/admin');
+				redirect('admin/admin');
 				break;
 			case 'editor':
-				redirect(base_url().'admin/editor');
+				redirect('admin/editor');
 				break;	
 			case 'suscriptor':
-				redirect(base_url().'admin/suscriptor');
+				redirect('admin/suscriptor');
 				break;
 			default:		
 				$data['titulo'] = 'Login con roles de usuario en codeigniter';
@@ -74,7 +81,7 @@ class Login extends CI_Controller
 				}
 			}
 		}else{
-			redirect(base_url().'admin/login');
+			redirect('admin/login');
 		}
 	}
 
