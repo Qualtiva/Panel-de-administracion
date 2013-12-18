@@ -3,7 +3,10 @@
 	<head>
 		<title><?php echo lang('titulo')?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/960.css" media="screen" />
+		<link href="<?=base_url()?>estatico/css/preview.css" rel="stylesheet" />
+		<script src="<?=base_url()?>estatico/js/modernizr.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+				<link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/960.css" media="screen" />
 		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/text.css" media="screen" />
 		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/reset.css" media="screen" />
 		 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
@@ -15,16 +18,19 @@
 		 	}
 		 	#login{
 		 		background: #fefefe;
-		 		min-height: 500px;
+		 		min-height: 300px;
 		 	}
 		 	#formulario_login{
 		 		font-size: 14px;
-		 		border: 8px solid #112233;		 		
+		 		background-image: linear-gradient(#013950, #00a8ec 90%, #013950);
+				border: none;
+				box-shadow: none;
+				outline: none;				
 		 	}
 		 	label{
 		 		display: block;
 		 		font-size: 16px;
-		 		color: #333333;
+		 		color: white;
 		 		font-weight: bold;
 		 	}
 		 	input[type=text],input[type=password]{
@@ -33,8 +39,9 @@
 		 	}
 		 	input[type=submit]{
 		 		padding: 5px 40px;
-		 		background: #61399d;
-		 		color: #fff;
+		 		background-color: white;
+				border: none;
+		 		color: black;
 		 	}
 		 	input[type=register]{
 		 		padding: 10px 40px;
@@ -50,16 +57,17 @@
 		 	}
 		 </style>
 	</head>
-	<body>
+<body class="eternity-form" style="background: url('<?php echo base_url()?>estatico/imagenes/bg.jpg');">
 	<?php
-	$username = array('name' => 'username', 'placeholder' => 'nombre de usuario');
-	$password = array('name' => 'password',	'placeholder' => 'introduce tu password');
+	$username = array('name' => 'username', 'placeholder' => 'Nombre de Usuario');
+	$password = array('name' => 'password',	'placeholder' => 'Introduce Tu Password');
 	$submit = array('name' => 'submit', 'value' => 'Iniciar sesión', 'title' => 'Iniciar sesión');
 	$register = array('name' => 'register', 'value' => 'Register', 'title' => 'Registrarse');
 	?>
 	<div class="container_12">
-		<h1>LOGIN - PANEL DE ADMINISTRACIÓN</h1>
-		<div class="grid_12" id="login">
+			<font color="black" style="text-shadow: black 0.1em 0.1em 0.2em;">
+				<h1>LOGIN - PANEL DE ADMINISTRACIÓN</h1>
+			</font>
 			<div class="grid_8 push_2" id="formulario_login">
 				<div class="grid_6 push_1" id="campos_login">
 					<?=form_open('admin/login/new_user')?>
@@ -67,7 +75,7 @@
 					<?=form_input($username)?><p><?=form_error('username')?></p>
 					<label for="password">Introduce tu password:</label>
 					<?=form_password($password)?><p><?=form_error('password')?></p>
-					<?=form_hidden('token',$token)?>
+					<?=form_hidden('token',$token)?></br>
 					<?=form_submit($submit)?>
 					<?=form_close()?>
 					<?php 
@@ -80,7 +88,6 @@
 					?>
 				</div>
 			</div>
-		</div>
 	</div>
 	</body>
 </html>
