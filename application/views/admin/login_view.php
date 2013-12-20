@@ -3,12 +3,12 @@
 	<head>
 		<title><?php echo lang('titulo')?></title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="<?=base_url()?>estatico/css/preview.css" rel="stylesheet" />
-		<script src="<?=base_url()?>estatico/js/modernizr.js"></script>
+		<link href="<?=base_url()?>estatico/admin/css/preview.css" rel="stylesheet" />
+		<script src="<?=base_url()?>estatico/admin/js/modernizr.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-				<link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/960.css" media="screen" />
-		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/text.css" media="screen" />
-		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/css/reset.css" media="screen" />
+				<link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/admin/css/960.css" media="screen" />
+		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/admin/css/text.css" media="screen" />
+		 <link rel="stylesheet" type="text/css" href="<?=base_url()?>estatico/admin/css/reset.css" media="screen" />
 		 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 		 <style type="text/css">
 		 	h1{
@@ -57,7 +57,7 @@
 		 	}
 		 </style>
 	</head>
-<body class="eternity-form" style="background: url('<?php echo base_url()?>estatico/imagenes/bg.jpg');">
+<body class="eternity-form">
 	<?php
 	$username = array('name' => 'username', 'placeholder' => 'Nombre de Usuario');
 	$password = array('name' => 'password',	'placeholder' => 'Introduce Tu Password');
